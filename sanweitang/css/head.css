@@ -1,0 +1,50 @@
+.content {
+  width: 1200px;
+  margin: auto;
+}
+
+header {
+  padding: 23px 0;
+  line-height: 1;
+  font-size: 0;
+  background-color: #fff;
+}
+
+header .content {
+  display: flex;
+  position: relative;
+}
+
+header .content h1 {
+  padding-right: 46px;
+}
+
+header .content h3 {
+  padding: 15px 0 12px 30px;
+  font-size: 20px;
+  color: #666;
+  background: url(../images/zhuce/login3.png) no-repeat left top;
+}
+
+header .content .menu {
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+
+header .content .menu span {
+  display: inline-block;
+  margin: 0 14px;
+  height: 12px;
+  border-right: solid 1px #bebebe;
+}
+
+header .content .menu a {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+header .content .menu a:hover {
+  color: #c01414;
+}
