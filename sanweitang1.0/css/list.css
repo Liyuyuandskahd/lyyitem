@@ -168,7 +168,7 @@ main .content .main-right .main-right-head .sort p:first-child span {
 }
 
 main .content .main-right .main-right-head .sort p:hover span {
-  color: #c01414;
+  color: #c01414 !important;
 }
 
 main .content .main-right .main-right-head .pagination {

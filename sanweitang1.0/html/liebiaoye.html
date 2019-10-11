@@ -111,7 +111,7 @@
             <div class="main-right">
                 <div class="main-right-head">
                     <div class="sort">
-                        <p>
+                        <p class="notrank">
                             <span>综合</span>
                         </p>
                         <p class="price-rank">
@@ -190,16 +190,25 @@
     <script src="../js/headrest.js"></script>
     <script>
         //排序
-        // (function () {
-        //     $('.sort p').each(function (index, item) {
-        //         $(item).mouseenter(function () {
-        //             $(this).find('span').eq(1).attr('class', 'iconfont icon-shengxu1');
-        //         });
-        //         $(item).mouseleave(function () {
-        //             $(this).find('span').eq(1).attr('class', 'iconfont icon-jiangxu1');
-        //         })
-        //     });
-        // })();
+        (function () {
+            $('.sort p').each(function (index, item) {
+                $(item).mouseenter(function () {
+                    if ($(this).find('span').eq(1).attr('class') == 'iconfont icon-jiangxu1') {
+                        $(this).find('span').eq(1).attr('class', 'iconfont icon-shengxu1');
+                    } else {
+                        $(this).find('span').eq(1).attr('class', 'iconfont icon-jiangxu1');
+                    }
+                });
+                $(item).mouseleave(function () {
+                    if ($(this).find('span').eq(1).attr('class') == 'iconfont icon-jiangxu1') {
+                        $(this).find('span').eq(1).attr('class', 'iconfont icon-shengxu1');
+                    } else {
+                        $(this).find('span').eq(1).attr('class', 'iconfont icon-jiangxu1');
+                    }
+
+                })
+            });
+        })();
 
         //渲染数据
         (function () {
@@ -211,6 +220,7 @@
             let sure = document.querySelector('.seek'); //搜索按钮节点
             let sort = document.querySelector('.sort'); //排序类型
             let pricerank = document.querySelector('.price-rank'); //价格排序
+            let notrank = document.querySelector('.notrank'); //价格排序
             let pagebox = document.querySelector('.page');
             let shopstotal = document.querySelector('.shopstotal');
             let nowpage = document.querySelector('.nowpage');
@@ -309,22 +319,40 @@
 
                         if (isok) {
                             rank = 'asc';
-                            pricerank.children[1].className = 'iconfont icon-shengxu1';
+                            pricerank.children[1].className = 'iconfont icon-jiangxu1';
                             pricerank.children[0].style.color = '#c01414';
                             pricerank.children[1].style.color = '#c01414';
                             isok = false;
                         } else {
                             rank = 'desc';
-                            pricerank.children[1].className = 'iconfont icon-jiangxu1';
+                            pricerank.children[1].className = 'iconfont icon-shengxu1';
                             pricerank.children[0].style.color = '#c01414';
                             pricerank.children[1].style.color = '#c01414';
                             isok = true;
                         }
-
-                        console.log(pricerank.children[1]);
                         ipage = 1;
                         init();
 
+                    }
+
+                    notrank.onclick = (ev) => {   //排序
+                        for (let i = 0; i < ev.target.parentNode.children.length; i++) {
+                            for (let j = 0; j < ev.target.parentNode.children[i].children.length; j++) {
+                                ev.target.parentNode.children[i].children[j].style.color = '#666666';
+                            }
+
+                        }
+                        for (let i = 0; i < ev.target.parentNode.parentNode.children.length; i++) {
+                            for (let j = 0; j < ev.target.parentNode.parentNode.children[i].children.length; j++) {
+                                ev.target.parentNode.parentNode.children[i].children[j].style.color = '#666666';
+                            }
+
+                        }
+
+                        rank = '';
+                        notrank.children[0].style.color = '#c01414';
+                        ipage = 1;
+                        init();
                     }
 
                     //上一页和下一页、首页和尾页
