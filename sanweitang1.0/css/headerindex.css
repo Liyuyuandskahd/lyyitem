@@ -1,0 +1,338 @@
+.content {
+  width: 1200px;
+  margin: auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+header {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+header p {
+  display: flex;
+  float: left;
+  font-size: 12px;
+  line-height: 36px;
+  color: #666;
+}
+
+header p a {
+  font-size: 12px;
+  line-height: 36px;
+  text-decoration: none;
+  margin: 0 18px;
+  color: #666;
+}
+
+header p .welcome {
+  font-size: 12px;
+  line-height: 36px;
+  color: #666;
+  display: none;
+}
+
+header p a:last-child {
+  margin-left: 16px;
+}
+
+header .head-title {
+  float: right;
+  display: flex;
+}
+
+header .head-title .h-tab {
+  line-height: 36px;
+  font-size: 12px;
+  color: #666;
+  position: relative;
+  padding: 0 13px;
+  cursor: pointer;
+}
+
+header .head-title .h-tab:last-child {
+  padding-right: 0;
+}
+
+header .head-title .h-tab:nth-child(-n+4)::after {
+  content: '';
+  left: auto;
+  display: block;
+  height: 10px;
+  margin: auto;
+  border-right: 1px solid #cccccd;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+header .head-title .h-tab:nth-child(4) {
+  position: relative;
+}
+
+header .head-title .h-tab:nth-child(4) .collect {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #f2f2f2;
+}
+
+header .head-title .h-tab:nth-child(4) .collect .c-list {
+  line-height: 22px;
+  font-size: 12px;
+  color: #666;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  z-index: 666;
+}
+
+header p a:hover {
+  color: #c01414;
+}
+
+header .head-title .h-tab:hover {
+  color: #c01414;
+}
+
+header .head-title .h-tab:nth-child(4) .collect .c-list:hover {
+  color: #c01414;
+}
+
+header .head-title .h-tab:nth-child(4):hover .collect {
+  height: 52px;
+}
+
+.searchbox .content {
+  padding: 70px 0 37px;
+  position: relative;
+  display: flex;
+}
+
+.searchbox .content .logo {
+  width: 132px;
+  height: 54px;
+  margin-top: 10px;
+}
+
+.searchbox .content .search {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0;
+  z-index: 666;
+}
+
+.searchbox .content .search .category {
+  width: 58px;
+  height: 40px;
+  padding: 0 6px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  color: #666666;
+  display: inline-block;
+  border: solid 2px #c01414;
+  border-right: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.searchbox .content .search .drop-down {
+  position: absolute;
+  top: 50%;
+  left: 54px;
+  transform: translateY(-50%);
+  padding-left: 8px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #666666;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.searchbox .content .search .search-mold {
+  padding: 0 19px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background: #fff;
+  border: solid 1px #ebebeb;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.03);
+  display: none;
+}
+
+.searchbox .content .search .search-mold li {
+  font-size: 16px;
+  color: #666666;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.searchbox .content .search .search-mold li:hover {
+  color: #c01414;
+}
+
+.searchbox .content .search .intext {
+  vertical-align: middle;
+  width: 490px;
+  height: 44px;
+  padding: 0 18px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: solid 2px #c01414;
+  border-left: none;
+  border-right: none;
+}
+
+.searchbox .content .search .seek {
+  width: 98px;
+  height: 44px;
+  font-size: 16px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  vertical-align: middle;
+  background: #c01414;
+  cursor: pointer;
+}
+
+.searchbox .content .search .icon-seek {
+  position: absolute;
+  top: 50%;
+  font-size: 16px;
+  color: #fff;
+  right: 66px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.searchbox .content .keyword-list {
+  width: 648px;
+  position: absolute;
+  top: 124px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+}
+
+.searchbox .content .keyword-list li {
+  font-size: 12px;
+  color: #818181;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.searchbox .content .keyword-list li:hover {
+  color: #c01414;
+}
+
+nav {
+  width: 100%;
+  background: #c01414;
+}
+
+nav .content {
+  display: flex;
+}
+
+nav .content .sidebar h3 {
+  width: 216px;
+  padding: 0 22px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
+  background: #b40003;
+  position: relative;
+  cursor: pointer;
+}
+
+nav .content .sidebar h3 span {
+  font-size: 14px;
+  float: right;
+  cursor: pointer;
+}
+
+nav .content .sidebar h3 .sidebar-cont {
+  height: 600px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  background: #c01414;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 6666;
+}
+
+nav .content .sidebar h3 .sidebar-cont li {
+  text-align: center;
+  line-height: 50px;
+  padding: 0 21px;
+  cursor: pointer;
+}
+
+nav .content .sidebar h3 .sidebar-cont li .keyword-list-cont {
+  position: absolute;
+  top: 0;
+  left: 216px;
+  width: 900px;
+  height: 570px;
+  color: #333333;
+  background: #fff;
+  padding: 24px 0;
+  box-sizing: border-box;
+  display: none;
+}
+
+nav .content .sidebar h3 .sidebar-cont li .keyword-list-cont dl dd {
+  line-height: 40px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+nav .content .sidebar h3 .sidebar-cont li .keyword-list-cont dl dd:hover {
+  color: #c01414;
+}
+
+nav .content .sidebar h3 .sidebar-cont li:hover {
+  background: #b40003;
+}
+
+nav .content .sidebar h3:hover .sidebar-cont {
+  display: block;
+}
+
+nav .content .nav-carve {
+  display: flex;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
+}
+
+nav .content .nav-carve li {
+  padding: 0 21px;
+  cursor: pointer;
+}
+
+nav .content .nav-carve li:hover {
+  background: #b40003;
+}
