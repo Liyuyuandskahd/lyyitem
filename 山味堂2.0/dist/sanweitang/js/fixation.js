@@ -1,0 +1,1 @@
+"use strict";function fixation(n){var s=document.getElementsByClassName(n)[0],t=s.offsetTop;window.onscroll=function(){var o=window.scrollY;s.className=t<o?n+" tabfix":n}}
